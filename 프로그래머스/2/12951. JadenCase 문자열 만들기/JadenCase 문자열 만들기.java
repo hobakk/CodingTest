@@ -1,22 +1,20 @@
 class Solution {
     public String solution(String s) {
-        StringBuilder answer = new StringBuilder();
-        boolean startOfWord = true;
+		StringBuilder sb = new StringBuilder();
+        boolean startWord = true;
+		
+		for (char c : s.toLowerCase().toCharArray()) {
+			if (c == ' ') startWord = true;
+            else if (Character.isDigit(c)) startWord = false;
+            else if (startWord) {
+                sb.append((char) (c - 32));
+                startWord = false;
+                continue;
+            } 
+            
+            sb.append(c);
+		}
 
-        for (char c : s.toCharArray()) {
-            if (Character.isWhitespace(c)) {
-                startOfWord = true;
-                answer.append(c);
-            } else {
-                if (startOfWord) {
-                    answer.append(Character.toUpperCase(c));
-                    startOfWord = false;
-                } else {
-                    answer.append(Character.toLowerCase(c));
-                }
-            }
-        }
-
-        return answer.toString();
-    }
+		return sb.toString();
+	}
 }
