@@ -3,47 +3,37 @@ import java.util.stream.*;
 
 class Solution {
     public String solution(String[] survey, int[] choices) {
-		int[][] arrs = new int[4][2];
+		Map<String, Integer> map = new HashMap<>();
+		map.put("R" ,0);
+		map.put("T" ,0);
+		map.put("C" ,0);
+		map.put("F" ,0);
+		map.put("J" ,0);
+		map.put("M" ,0);
+		map.put("A" ,0);
+		map.put("N" ,0);
+
+		String key;
 		for (int i=0; i < survey.length; i++) {
-			int point = 0;
-			String str = "";
 			switch(choices[i]) {
-				case 1: str = Character.toString(survey[i].charAt(0)); point = 3; break;
-				case 2: str = Character.toString(survey[i].charAt(0)); point = 2; break;
-				case 3: str = Character.toString(survey[i].charAt(0)); point = 1; break;
-				case 5: str = Character.toString(survey[i].charAt(1)); point = 1; break;
-				case 6: str = Character.toString(survey[i].charAt(1)); point = 2; break;
-				case 7: str = Character.toString(survey[i].charAt(1)); point = 3; break;
-			}
-
-			switch(str) {
-				case "R": arrs[0][0] += point; break;
-				case "T": arrs[0][1] += point; break;
-				case "C": arrs[1][0] += point; break;
-				case "F": arrs[1][1] += point; break;
-				case "J": arrs[2][0] += point; break;
-				case "M": arrs[2][1] += point; break;
-				case "A": arrs[3][0] += point; break;
-				case "N": arrs[3][1] += point; break;
+				case 1: key = Character.toString(survey[i].charAt(0)); map.put(key, map.get(key) + 3); break;
+				case 2: key = Character.toString(survey[i].charAt(0)); map.put(key, map.get(key) + 2); break;
+				case 3: key = Character.toString(survey[i].charAt(0)); map.put(key, map.get(key) + 1); break;
+				case 5: key = Character.toString(survey[i].charAt(1)); map.put(key, map.get(key) + 1); break;
+				case 6: key = Character.toString(survey[i].charAt(1)); map.put(key, map.get(key) + 2); break;
+				case 7: key = Character.toString(survey[i].charAt(1)); map.put(key, map.get(key) + 3); break;
 			}
 		}
-
+		
 		StringBuilder sb = new StringBuilder();
-		for (int i=0; i < arrs.length; i++) {
-			int[] arr = arrs[i];
-
-			if (arr[0] < arr[1] && i == 0) sb.append("T");
-			else if (arr[0] >= arr[1] && i == 0) sb.append("R");
-
-			if (arr[0] < arr[1] && i == 1) sb.append("F");
-			else if (arr[0] >= arr[1] && i == 1) sb.append("C");
-
-			if (arr[0] < arr[1] && i == 2) sb.append("M");
-			else if (arr[0] >= arr[1] && i == 2) sb.append("J");
-
-			if (arr[0] < arr[1] && i == 3) sb.append("N");
-			else if (arr[0] >= arr[1] && i == 3) sb.append("A");
-		}
+		if (map.get("R") >= map.get("T")) sb.append("R");
+		else sb.append("T");
+		if (map.get("C") >= map.get("F")) sb.append("C");
+		else sb.append("F");
+		if (map.get("J") >= map.get("M")) sb.append("J");
+		else sb.append("M");
+		if (map.get("A") >= map.get("N")) sb.append("A");
+		else sb.append("N");
 
 		return sb.toString();
 	}
