@@ -1,0 +1,43 @@
+import java.util.*;
+
+class Solution {
+    public int solution(String[] friends, String[] gifts) {
+		int answer = 0;
+        List<String> names = Arrays.asList(friends);
+		int[][] arr = new int[friends.length][friends.length];
+
+		for (int i=0; i < friends.length; i++) {
+			String target = friends[i];
+            for (int j=0; j < gifts.length; j++) {
+                String[] friend = gifts[j].split(" ");
+			    if (target.equals(friend[0])) arr[i][names.indexOf(friend[1])] += 1;
+            }
+		}
+
+        int[] giftPoint = new int[friends.length];
+        for (int i=0; i < arr.length; i++) {
+            int point = 0;
+            for (int j=0; j < arr.length; j++) {
+                if (i != j && arr[i][j] > 0) point += arr[i][j];
+            }
+
+            for (int j=0; j < arr.length; j++) {
+                if (i != j && arr[j][i] > 0) point -= arr[j][i];
+            }
+
+            giftPoint[i] = point;
+        }
+
+        for (int i=0; i < arr.length; i++) {
+            int nextMonthGift = 0;
+            for (int j=0; j < arr.length; j++) {
+                if (i != j && arr[i][j] == arr[j][i]) nextMonthGift += giftPoint[i] > giftPoint[j] ? 1 : 0;
+                if (arr[i][j] > 0 && arr[i][j] > arr[j][i]) nextMonthGift++;
+            }
+
+            answer = Math.max(answer, nextMonthGift);
+        }
+		
+		return answer;
+    }
+}
