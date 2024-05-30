@@ -1,10 +1,10 @@
 # [level 1] 자릿수 더하기 - 12931 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12931) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12931?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 74.7 MB, 시간: 0.03 ms
+메모리: 64.9 MB, 시간: 29.59 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 1일 21:35:15
+2024년 05월 30일 22:12:49
 
 ### 문제 설명
 
