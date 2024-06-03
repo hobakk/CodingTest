@@ -1,10 +1,10 @@
 # [level 1] 정수 내림차순으로 배치하기 - 12933 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12933) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12933?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 73.7 MB, 시간: 0.30 ms
+메모리: 65.1 MB, 시간: 32.51 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 1일 23:4:32
+2024년 06월 03일 22:14:41
 
 ### 문제 설명
 
