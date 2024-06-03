@@ -1,7 +1,5 @@
 class Solution {
     fun solution(arr: IntArray): Double {
-        var answer = 0
-        arr.forEach { answer += it }
-        return answer.toDouble() / arr.size
+        return arr.map { it.toDouble() }.average()
     }
 }
