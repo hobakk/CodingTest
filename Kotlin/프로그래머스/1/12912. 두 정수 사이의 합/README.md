@@ -1,6 +1,6 @@
 # [level 1] 두 정수 사이의 합 - 12912 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12912) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12912?language=kotlin) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 06월 05일 15:31:03
+2024년 06월 05일 15:31:52
 
 ### 문제 설명
 
