@@ -1,10 +1,10 @@
 # [level 1] 수박수박수박수박수박수? - 12922 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12922) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12922?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 72.4 MB, 시간: 0.07 ms
+메모리: 60.2 MB, 시간: 4.50 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 2일 16:5:52
+2024년 06월 07일 19:48:58
 
 ### 문제 설명
 
