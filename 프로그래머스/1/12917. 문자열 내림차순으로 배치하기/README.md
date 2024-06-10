@@ -1,10 +1,10 @@
 # [level 1] 문자열 내림차순으로 배치하기 - 12917 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12917) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12917?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 76.3 MB, 시간: 0.46 ms
+메모리: 64.6 MB, 시간: 34.72 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 2일 16:55:39
+2024년 06월 10일 22:12:33
 
 ### 문제 설명
 
