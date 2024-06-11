@@ -1,10 +1,10 @@
 # [level 1] 최대공약수와 최소공배수 - 12940 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12940) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12940?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 72.7 MB, 시간: 0.02 ms
+메모리: 62.6 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 11월 2일 20:9:24
+2024년 06월 11일 21:38:12
 
 ### 문제 설명
 
